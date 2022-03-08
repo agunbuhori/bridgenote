@@ -50,8 +50,8 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single'],
-            'ignore_exceptions' => false,
+            'name' => 'bridgenote',
+            'channels' => ['single', 'slack'],
         ],
 
         'single' => [

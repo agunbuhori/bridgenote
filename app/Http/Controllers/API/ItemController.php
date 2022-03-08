@@ -6,6 +6,7 @@ use App\Models\Item;
 use App\Models\Order;
 use App\Models\Sale;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class ItemController extends ApiController
 {
@@ -97,8 +98,12 @@ class ItemController extends ApiController
             $order->quantity -= $qty;
             $order->save();
 
+            Log::info("Yes: warehouse qty $qty");
+            
             return $this->success($sale, 201, "Item is sold");
         }
+        
+        Log::warning("No: warehouse qty $qty");
 
         return $this->failed(403, "Not enough items");
     }
