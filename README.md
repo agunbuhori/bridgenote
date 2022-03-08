@@ -34,5 +34,10 @@ Test application
 php artisan test
 ```
 
+Run application
+```
+php artisan test
+```
+
 
 
