@@ -13,7 +13,7 @@ Then install packages by composer
 composer install
 ```
 
-Edit .env and setup database configuration
+Edit _.env_ and setup database configuration
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
