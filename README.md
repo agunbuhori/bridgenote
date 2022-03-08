@@ -26,7 +26,7 @@ DB_PASSWORD=DB PASSWORD
 Migrate and seed, then install passport
 ```
 php artisan migrate --seed
-php artisan passport install
+php artisan passport:install
 ```
 
 Test application
@@ -39,5 +39,6 @@ Run application
 php artisan serve
 ```
 
+## API Documentation
 
-
+Documentation using Postman. Please download the [postman_documentation.json] file and then import it into the postman application.
