@@ -28,7 +28,7 @@ class AuthController extends ApiController
 
         $newUser = User::create($request->all());
 
-        return $this->success($newUser, 200, "Register success");
+        return $this->success($newUser, 201, "Register success");
     }
     /**
      * User authentication
@@ -47,7 +47,7 @@ class AuthController extends ApiController
                 'tokenType' => 'Bearer',
                 'accessToken' => $token->accessToken,
                 'expiresIn' => $expires
-            ]);
+            ], 201);
         }
 
         return $this->failed(403, 'Authentication Failed');
@@ -74,6 +74,6 @@ class AuthController extends ApiController
     {
         $request->user()->token()->revoke();
 
-        return $this->success(null, 200, "User has logout");
+        return $this->success(null, 201, "User has logout");
     }
 }

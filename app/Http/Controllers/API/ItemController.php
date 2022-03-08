@@ -40,7 +40,7 @@ class ItemController extends ApiController
         $order->quantity += $qty;
         $order->save();
 
-        return $this->success($order);
+        return $this->success($order, 201);
     }
 
     /**
@@ -54,7 +54,7 @@ class ItemController extends ApiController
 
         $item = Order::where(['item_id' => $item_id, 'user_id' => $user->id])->delete();
 
-        return $this->success($item, 200, "Item deleted");
+        return $this->success($item, 201, "Item deleted");
     }
 
      /**
@@ -97,7 +97,7 @@ class ItemController extends ApiController
             $order->quantity -= $qty;
             $order->save();
 
-            return $this->success($sale, 200, "Item is sold");
+            return $this->success($sale, 201, "Item is sold");
         }
 
         return $this->failed(403, "Not enough items");
