@@ -41,4 +41,4 @@ php artisan serve
 
 ## API Documentation
 
-Documentation using Postman. Please download the [postman_documentation.json] file and then import it into the postman application.
+Documentation using Postman. Please download the [postman_documentation.json](postman_documentation.json) file and then import it into the postman application.
