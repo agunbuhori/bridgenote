@@ -13,7 +13,7 @@ Then install packages by composer
 composer install
 ```
 
-Edit _.env_ and setup database configuration
+Edit *.env* and setup database configuration
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -36,7 +36,7 @@ php artisan test
 
 Run application
 ```
-php artisan test
+php artisan serve
 ```
 
 
